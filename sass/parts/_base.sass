@@ -7,34 +7,69 @@
 
 body
   +box__full
+  padding: 10px
   background: #444
   color: #f3f3f3
   font-style: italic
+  @media (min-width: 600px)
+    padding: 0 20px
+
+.page__wrap
+  display: grid
+  grid-template-columns: 1fr
+  grid-auto-rows: auto
+  grid-gap: 10px
+
+.link__home-ninja
+  +box__full
+  +margin-bottom__two-vh
+  background: rgba(#999,.4)
+  img
+    +box__full
+
 
 header
   +box__full
+  +margin-bottom__ten-vh
   text-align: center
+  +border-bottom__color--trim
+  // p
+  //   +text__paragraph--media
+
+.header__img
+  +box__three-fourth
+  img
+    +box__full
+    +margin-bottom__two-vh
+
 
 main
   +grid__media--lg
 
 section
-  display: flex
-  flex-direction: column
+  +grid--small
 
 .img__box
   grid-column: span 1
   img
-    width: 300px
-    height: auto
-    margin: 0 auto
-    padding: 1px
+    +box__full
+    +border__shadow--all-trim
+    // width: 300px
+    // height: auto
+    // margin: 0 auto
+    // padding: 1px
 
 
 .anchor__box
   +box__three-fourth
-  +text__align--media
   +clr__combo--inverse
+  +border__shadow--all
+  +padding__text
+  text-align: center
+  +trans-0
+  &:hover
+    +clr__combo--primary
+    text-decoration: none
 
 // --------------------
 // INTRO/HEADER
